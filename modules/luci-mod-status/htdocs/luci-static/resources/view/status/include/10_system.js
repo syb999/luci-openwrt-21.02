@@ -55,7 +55,7 @@ return baseclass.extend({
 		var fields = [
 			_('Hostname'),         boardinfo.hostname,
 			_('Model'),            boardinfo.model,
-			_('温度'),             tempinfo = parseInt(tempinfo) / 1000+ " ℃",
+			_('Temperature'),      tempinfo = parseInt(tempinfo) / 1000+ " ℃",
 			_('Architecture'),     boardinfo.system,
 			_('Target Platform'),  (L.isObject(boardinfo.release) ? boardinfo.release.target : ''),
 			_('Firmware Version'), (L.isObject(boardinfo.release) ? boardinfo.release.description + ' / ' : '') + (luciversion || ''),
