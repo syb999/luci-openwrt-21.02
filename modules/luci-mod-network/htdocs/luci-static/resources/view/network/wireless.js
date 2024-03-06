@@ -1507,9 +1507,13 @@ return view.extend({
 					o.depends({ mode : 'ap', encryption : 'psk' });
 					o.depends({ mode : 'ap', encryption : 'psk2' });
 					o.depends({ mode : 'ap', encryption : 'psk-mixed' });
+					o.depends({ mode : 'ap', encryption : 'sae' });
+					o.depends({ mode : 'ap', encryption : 'sae-mixed' });
 					o.depends({ mode : 'ap-wds', encryption : 'psk' });
 					o.depends({ mode : 'ap-wds', encryption : 'psk2' });
 					o.depends({ mode : 'ap-wds', encryption : 'psk-mixed' });
+					o.depends({ mode : 'ap-wds', encryption : 'sae' });
+					o.depends({ mode : 'ap-wds', encryption : 'sae-mixed' });
 					o.rmempty = true;
 
 					o = ss.taboption('encryption', form.Flag, 'rrm_neighbor_report', _('Enable neighbor report via radio measurements'));
@@ -1532,9 +1536,13 @@ return view.extend({
 					o.depends({ mode : 'ap', encryption : 'psk' });
 					o.depends({ mode : 'ap', encryption : 'psk2' });
 					o.depends({ mode : 'ap', encryption : 'psk-mixed' });
+					o.depends({ mode : 'ap', encryption : 'sae' });
+					o.depends({ mode : 'ap', encryption : 'sae-mixed' });
 					o.depends({ mode : 'ap-wds', encryption : 'psk' });
 					o.depends({ mode : 'ap-wds', encryption : 'psk2' });
 					o.depends({ mode : 'ap-wds', encryption : 'psk-mixed' });
+					o.depends({ mode : 'ap-wds', encryption : 'sae' });
+					o.depends({ mode : 'ap-wds', encryption : 'sae-mixed' });
 					o.rmempty = true;
 
 
