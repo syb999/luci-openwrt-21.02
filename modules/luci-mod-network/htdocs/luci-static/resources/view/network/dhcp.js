@@ -37,7 +37,8 @@ CBILeaseStatus = form.DummyValue.extend({
 					E('th', { 'class': 'th' }, _('Hostname')),
 					E('th', { 'class': 'th' }, _('IPv4 address')),
 					E('th', { 'class': 'th' }, _('MAC address')),
-					E('th', { 'class': 'th' }, _('Lease time remaining'))
+					E('th', { 'class': 'th' }, _('Lease time remaining')),
+					E('th', { 'class': 'th' }, _('Tag name'))
 				]),
 				E('tr', { 'class': 'tr placeholder' }, [
 					E('td', { 'class': 'td' }, E('em', _('Collecting data...')))
@@ -56,7 +57,8 @@ CBILease6Status = form.DummyValue.extend({
 					E('th', { 'class': 'th' }, _('Host')),
 					E('th', { 'class': 'th' }, _('IPv6 address')),
 					E('th', { 'class': 'th' }, _('DUID')),
-					E('th', { 'class': 'th' }, _('Lease time remaining'))
+					E('th', { 'class': 'th' }, _('Lease time remaining')),
+					E('th', { 'class': 'th' }, _('Tag name'))
 				]),
 				E('tr', { 'class': 'tr placeholder' }, [
 					E('td', { 'class': 'td' }, E('em', _('Collecting data...')))
@@ -609,6 +611,9 @@ return view.extend({
 		so = ss.option(form.Value, 'leasetime', _('Lease time'));
 		so.rmempty = true;
 
+		so=ss.option(form.Value,'tag',_('Tag name'));
+		so.rmempty = true;
+
 		so = ss.option(form.Value, 'duid', _('<abbr title="The DHCP Unique Identifier">DUID</abbr>'));
 		so.datatype = 'and(rangelength(20,36),hexstring)';
 		Object.keys(duids).forEach(function(duid) {
@@ -652,7 +657,8 @@ return view.extend({
 								host || '-',
 								lease.ipaddr,
 								lease.macaddr,
-								exp
+								exp,
+								tag
 							];
 						}),
 						E('em', _('There are no active leases')));
@@ -684,7 +690,8 @@ return view.extend({
 									host || '-',
 									lease.ip6addrs ? lease.ip6addrs.join(' ') : lease.ip6addr,
 									lease.duid,
-									exp
+									exp,
+									tag
 								];
 							}),
 							E('em', _('There are no active leases')));
