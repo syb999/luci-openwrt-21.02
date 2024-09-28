@@ -10,8 +10,8 @@ msgstr "PPPwn 监听网络接口"
 msgid "PlayStation 4 System Version"
 msgstr "PlayStation 4 系统版本"
 
-msgid "1100 means Ver 11.00 etc."
-msgstr "1100 代表 11.00 版本，以此类推"
+msgid "900 means Ver 9.00 etc."
+msgstr "900 代表 9.00 版本，以此类推"
 
 msgid "Download GoldHEN Payload BIN"
 msgstr "点击下载 GoldHEN Payload 二进制文件"
