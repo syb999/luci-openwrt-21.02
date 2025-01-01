@@ -8757,6 +8757,9 @@ msgstr "« 后退"
 msgid "Temperature"
 msgstr "温度"
 
+msgid "After setting the tagname, fill in the corresponding Tag name in the static address allocation column"
+msgstr "设置tagname后在静态地址分配栏里填入对应的Tag name"
+
 #~ msgid "Enable promiscious mode"
 #~ msgstr "启用混杂模式"
 

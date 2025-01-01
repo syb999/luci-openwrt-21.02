@@ -373,6 +373,13 @@ return view.extend({
 		o.validate = validateServerSpec;
 
 
+		o = s.taboption('general', form.DynamicList, 'dhcp_option', _('DHCP OPTION with tag'),
+			_('After setting the tagname, fill in the corresponding Tag name in the static address allocation column'));
+		o.optional = true;
+		o.placeholder = 'tag:tagname,3,192.168.1.2';
+		o.placeholder = 'tag:tagname,6,192.168.1.2';
+
+
 		o = s.taboption('general', form.DynamicList, 'address', _('Addresses'),
 			_('List of domains to force to an IP address.'));
 
