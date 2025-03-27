@@ -38,6 +38,12 @@ if nixio.fs.access("/usr/bin/dockerd") and not m.uci:get_bool("dockerd", "docker
 	o.datatype = "ipaddr"
 	o:depends("remote_endpoint", 0)
 
+	o = s:option(Flag, "iptables",
+		translate("Enable iptables"),
+		translate("Enabling it will cause IPv6 blocking"))
+	o.rmempty = false
+	o:depends("remote_endpoint", 0)
+
 	o = s:option(DynamicList, "registry_mirrors",
 		translate("Registry Mirrors"),
 		translate("It replaces the daemon registry mirrors with a new set of registry mirrors"))

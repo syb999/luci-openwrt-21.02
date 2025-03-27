@@ -1022,6 +1022,12 @@ msgid ""
 "Interface Name"
 msgstr "哪些接口可以访问桥接网络下的容器，请填写接口名称"
 
+msgid "Enable iptables"
+msgstr "启用iptables"
+
+msgid "Enabling it will cause IPv6 blocking"
+msgstr "启用后会导致ipv6阻塞"
+
 #~ msgid "Containers allowed to be accessed"
 #~ msgstr "允许访问的容器"
 
