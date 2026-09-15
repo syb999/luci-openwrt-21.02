@@ -4,6 +4,15 @@
 -%>
 
 <%
+	-- luci-app-autodl: shortcut to the music page, only when the app is installed
+	local au_music = false
+	local au_ok, au_fs = pcall(require, "nixio.fs")
+	if au_ok and au_fs and au_fs.access then
+		au_music = au_fs.access("/www/music.htm")
+	end
+-%>
+
+<%
 	-- tell bootstrap's templates to not render header and footer
 	blank_page = true
 %>
@@ -39,6 +48,12 @@
 	<% end %>
 
 	<button class="btn cbi-button-positive important"><%:Login%></button>
+
+	<% if au_music then %>
+	<div style="margin-top:10px;text-align:center">
+		<a class="btn cbi-button" style="display:inline-block;padding:6px 14px;text-decoration:none" href="/music.htm" target="_blank">音乐播放器 / Music player</a>
+	</div>
+	<% end %>
 </section>
 
 <div id="view">
