@@ -1,11 +1,14 @@
 {
 	"luci-app-dawn": {
-		"description": "Grant UCI access for luci-app-dawn",
+		"description": "Grant UCI and ubus access for luci-app-dawn",
 		"read": {
-			"uci": [ "dawn" ]
+			"uci": [ "dawn", "wireless" ],
+			"ubus": {
+				"dawn": [ "get_network", "get_hearing_map", "get_clients" ]
+			}
 		},
 		"write": {
-			"uci": [ "dawn" ]
+			"uci": [ "dawn", "wireless" ]
 		}
 	}
 }

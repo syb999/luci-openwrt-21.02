@@ -1,10 +1,11 @@
 include $(TOPDIR)/rules.mk
 
+PKG_RELEASE:=9
+
 LUCI_TITLE:=LuCI support for DAWN
-LUCI_DEPENDS:=+dawn +luci-compat +luci-lib-json
+LUCI_DEPENDS:=+dawn +luci-compat
 LUCI_PKGARCH:=all
 
 include ../../luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
-
